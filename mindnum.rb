@@ -5,20 +5,20 @@
 class Mindnum < Formula
   desc ""
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.3/mindnum_Darwin_x86_64.tar.gz"
-      sha256 "9fdc156f3b9c742c8894b2de64bf4e0d71a5a4b0caa0b98e3f36d8f9f080ba9a"
+      url "https://github.com/yanosea/mindnum/releases/download/v0.0.4/mindnum_Darwin_x86_64.tar.gz"
+      sha256 "09640628661cf020bccbdbd2deca6f1d2774ac2e60f9806ee9e513cd885970f1"
 
       def install
         bin.install "mindnum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.3/mindnum_Darwin_arm64.tar.gz"
-      sha256 "33ac6f8ac50b2a5ab76098e6470909ce9f00a228ed6c77e3adf4f5a8034d443b"
+      url "https://github.com/yanosea/mindnum/releases/download/v0.0.4/mindnum_Darwin_arm64.tar.gz"
+      sha256 "179f2c9351f78e961f40088a6aa6c4b0b2142ec4952af9a5e9a5d050ab62f991"
 
       def install
         bin.install "mindnum"
@@ -27,17 +27,17 @@ class Mindnum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.3/mindnum_Linux_x86_64.tar.gz"
-      sha256 "89c95d47f391b76521fc7e996a8cd0e96ad78f83ca500ad55a77ea8765f0185b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/yanosea/mindnum/releases/download/v0.0.4/mindnum_Linux_arm64.tar.gz"
+      sha256 "454f8a3aace75d04f561ffb2a0028914bbefeffceda26cfc609344820e7e82d9"
 
       def install
         bin.install "mindnum"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.3/mindnum_Linux_arm64.tar.gz"
-      sha256 "a36542d930d803f10a09ae619dbd7473fb22bca959b0173a54586d1c26d713aa"
+    if Hardware::CPU.intel?
+      url "https://github.com/yanosea/mindnum/releases/download/v0.0.4/mindnum_Linux_x86_64.tar.gz"
+      sha256 "dfc22781208b9161ff064e6b3139e2b8e53e67d1d36675df04ac024f235dabcf"
 
       def install
         bin.install "mindnum"
