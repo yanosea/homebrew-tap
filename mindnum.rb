@@ -5,20 +5,20 @@
 class Mindnum < Formula
   desc ""
   homepage ""
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.6/mindnum_Darwin_arm64.tar.gz"
-      sha256 "a5a3e6dc2f899e19d02e3b161a87518a20e33bafcfc34ee2951b8d332ce2e079"
+    on_intel do
+      url "https://github.com/yanosea/mindnum/releases/download/v0.0.7/mindnum_Darwin_x86_64.tar.gz"
+      sha256 "2252bcf60a55d7982383889569ae45a6dbd82ca9983a42f25a1ab3dcac661307"
 
       def install
         bin.install "mindnum"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.6/mindnum_Darwin_x86_64.tar.gz"
-      sha256 "c98b9fb72db6664c82f422dfb538d7ece371b36a414cafa200204f1a0b221a76"
+    on_arm do
+      url "https://github.com/yanosea/mindnum/releases/download/v0.0.7/mindnum_Darwin_arm64.tar.gz"
+      sha256 "70e252daaaf1a2d38d006201dda224bf69da8444686fe0735087a1540fae7164"
 
       def install
         bin.install "mindnum"
@@ -27,20 +27,24 @@ class Mindnum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.6/mindnum_Linux_arm64.tar.gz"
-      sha256 "308439e3ea50eb0085f3bf1b305d855a8d73e09a8406f93052c89fd23d9bd020"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/yanosea/mindnum/releases/download/v0.0.7/mindnum_Linux_x86_64.tar.gz"
+        sha256 "ff5ef521d69e9c5e909c5dc9dd7733023ba9226abee94ce5f1b38eafb1a4682c"
 
-      def install
-        bin.install "mindnum"
+        def install
+          bin.install "mindnum"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yanosea/mindnum/releases/download/v0.0.6/mindnum_Linux_x86_64.tar.gz"
-      sha256 "d51ee3591a9149178d80634bd06c1577fe9e88a216af9871fba7397f2ee4086f"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/yanosea/mindnum/releases/download/v0.0.7/mindnum_Linux_arm64.tar.gz"
+        sha256 "d75aac2e021eaca15899abb3b47d40a4de5f85e26e77feee530c56807c4dafc4"
 
-      def install
-        bin.install "mindnum"
+        def install
+          bin.install "mindnum"
+        end
       end
     end
   end
