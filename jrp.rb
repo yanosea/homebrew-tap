@@ -5,20 +5,20 @@
 class Jrp < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/yanosea/jrp/releases/download/v0.4.0/jrp_Darwin_x86_64.tar.gz"
-      sha256 "cefd9d1c8aa054820e88cbfffed7d8cb868869c6c652272672cdbf040b305710"
+      url "https://github.com/yanosea/jrp/releases/download/v0.4.1/jrp_Darwin_x86_64.tar.gz"
+      sha256 "bdb036a5914c58b1b1ff3c1b8dae50eb7af27bfcd1b417bdb9d92fbb0d9b0b8e"
 
       def install
         bin.install "jrp"
       end
     end
     on_arm do
-      url "https://github.com/yanosea/jrp/releases/download/v0.4.0/jrp_Darwin_arm64.tar.gz"
-      sha256 "e7ef07afc533a073838a846e3842bd79c70e0f213b409ad48ec44cc36bf1c1f9"
+      url "https://github.com/yanosea/jrp/releases/download/v0.4.1/jrp_Darwin_arm64.tar.gz"
+      sha256 "3b79dedb226058208ba5b63c7925d893ed5eb4ce76e0fc649bf778b3ad17204e"
 
       def install
         bin.install "jrp"
@@ -29,8 +29,8 @@ class Jrp < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/jrp/releases/download/v0.4.0/jrp_Linux_x86_64.tar.gz"
-        sha256 "53c3323798504e5e9af8a3af0fb01dd54ee690b85a30be63093158b5549ec69b"
+        url "https://github.com/yanosea/jrp/releases/download/v0.4.1/jrp_Linux_x86_64.tar.gz"
+        sha256 "984985cbec3872fd95f3c4551585c105e5916718f5e9e3cacc726ff930391fe6"
 
         def install
           bin.install "jrp"
@@ -39,8 +39,8 @@ class Jrp < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/jrp/releases/download/v0.4.0/jrp_Linux_arm64.tar.gz"
-        sha256 "e4d99d2c534c3cbae08dfcf7a493486e552da9f2af40ae2cb90b3c5f004c45c5"
+        url "https://github.com/yanosea/jrp/releases/download/v0.4.1/jrp_Linux_arm64.tar.gz"
+        sha256 "920150169d2e3a444fbaeb06732a85e4357224f52fbed10a6122753940443544"
 
         def install
           bin.install "jrp"
