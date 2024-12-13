@@ -10,7 +10,7 @@ class Mindnum < Formula
   on_macos do
     on_intel do
       url "https://github.com/yanosea/mindnum/releases/download/v1.0.2/mindnum_Darwin_x86_64.tar.gz"
-      sha256 "d436a1bb34f820c50a699df41fc028fab5696f16ba91d2d71d08c250b86b3992"
+      sha256 "ad65819f916f67002c241ceed3fd6cd921daea1b30cda5736927c2d80c5948d8"
 
       def install
         bin.install "mindnum"
@@ -18,7 +18,7 @@ class Mindnum < Formula
     end
     on_arm do
       url "https://github.com/yanosea/mindnum/releases/download/v1.0.2/mindnum_Darwin_arm64.tar.gz"
-      sha256 "86b2f94f333159b7601ffc3ef15aaba694563c3f23bc594ca76de390c6e83cdb"
+      sha256 "1977b5d2a2f956cc6759073feef157d0521c4a26faaf179a111a1e98b73a266e"
 
       def install
         bin.install "mindnum"
@@ -30,7 +30,7 @@ class Mindnum < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/yanosea/mindnum/releases/download/v1.0.2/mindnum_Linux_x86_64.tar.gz"
-        sha256 "8041473f2eb1b14eaee93ab1f40d7f4033104943460331708900bc7cc6400ca3"
+        sha256 "570f2f205ecbfbe51ab464c36870b0028fbda94baae02122d2d17212849e78eb"
 
         def install
           bin.install "mindnum"
@@ -40,7 +40,7 @@ class Mindnum < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/yanosea/mindnum/releases/download/v1.0.2/mindnum_Linux_arm64.tar.gz"
-        sha256 "b4eea1b0a1c11b0226e53bda1ef8c141b639b4b67fcaa0d065fff803a5cfc543"
+        sha256 "aa9bdc9d7ecef53268cf0c0499e17dda43f5fce151502922fa42e1e1d1b58912"
 
         def install
           bin.install "mindnum"
