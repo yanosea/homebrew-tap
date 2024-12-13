@@ -5,20 +5,20 @@
 class Mindnum < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "1.0.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/yanosea/mindnum/releases/download/v0.1.0/mindnum_Darwin_x86_64.tar.gz"
-      sha256 "7a87444d59f82fc7cb33abeb7232237c7aa3a314aa9e1e925d2519187ff9c8b9"
+      url "https://github.com/yanosea/mindnum/releases/download/v1.0.0/mindnum_Darwin_x86_64.tar.gz"
+      sha256 "c9bbaa736f1562d5c76fd30a35de414288d7833683c96902924b119c532e8b30"
 
       def install
         bin.install "mindnum"
       end
     end
     on_arm do
-      url "https://github.com/yanosea/mindnum/releases/download/v0.1.0/mindnum_Darwin_arm64.tar.gz"
-      sha256 "48c7379e907eed5b469f12db32e645856fd98bd471568e09ebd5c1b3ee24fcae"
+      url "https://github.com/yanosea/mindnum/releases/download/v1.0.0/mindnum_Darwin_arm64.tar.gz"
+      sha256 "4bd7613ba8b1d274d7239bdbc1202b0fbf7416f5145f804bbb574dbd750dcbe3"
 
       def install
         bin.install "mindnum"
@@ -29,8 +29,8 @@ class Mindnum < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/mindnum/releases/download/v0.1.0/mindnum_Linux_x86_64.tar.gz"
-        sha256 "fd29759a2f3ca7413bba98239159c52f255ab0a6985751cd4301d198a99f1126"
+        url "https://github.com/yanosea/mindnum/releases/download/v1.0.0/mindnum_Linux_x86_64.tar.gz"
+        sha256 "1ee3421f22ff8aa8db6a90f711a9f6deabdf44f122efb0e261849805821e8515"
 
         def install
           bin.install "mindnum"
@@ -39,8 +39,8 @@ class Mindnum < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/mindnum/releases/download/v0.1.0/mindnum_Linux_arm64.tar.gz"
-        sha256 "9b195ae58a30036e56496e7488ab82ca21feb2c19db2833c3bfc68dd67aa77ca"
+        url "https://github.com/yanosea/mindnum/releases/download/v1.0.0/mindnum_Linux_arm64.tar.gz"
+        sha256 "394e0b2818e1a80087ca2deab0cc13d16ee241ba120da2d39534b7ae49ece03f"
 
         def install
           bin.install "mindnum"
