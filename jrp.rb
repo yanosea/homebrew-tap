@@ -5,20 +5,20 @@
 class Jrp < Formula
   desc ""
   homepage ""
-  version "1.2.3"
+  version "2.0.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/yanosea/jrp/releases/download/v1.2.3/jrp_Darwin_x86_64.tar.gz"
-      sha256 "02e9c6d47c741fc560901e178782ce3106d0cf12d5830e8f2678e875184337dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/yanosea/jrp/releases/download/v2.0.0/jrp_Darwin_x86_64.tar.gz"
+      sha256 "01dc201877c8761baa363fd84a0ef2fcad7820dc5c3980381271e8615f316294"
 
       def install
         bin.install "jrp"
       end
     end
-    on_arm do
-      url "https://github.com/yanosea/jrp/releases/download/v1.2.3/jrp_Darwin_arm64.tar.gz"
-      sha256 "402ab3e19a5b1ff2d5ea5d570e8f21a08cec4ca5800e87b49d55320634dc3222"
+    if Hardware::CPU.arm?
+      url "https://github.com/yanosea/jrp/releases/download/v2.0.0/jrp_Darwin_arm64.tar.gz"
+      sha256 "f21e9611d6e0e5a75ae7595bf7ccb7da219a0fa8c64d70cbe1b2e1245f647ed7"
 
       def install
         bin.install "jrp"
@@ -27,20 +27,20 @@ class Jrp < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/jrp/releases/download/v1.2.3/jrp_Linux_x86_64.tar.gz"
-        sha256 "ee431324609ab40f2c325171d9900b4a94e96578a9a564f52c37de3edd439349"
+        url "https://github.com/yanosea/jrp/releases/download/v2.0.0/jrp_Linux_x86_64.tar.gz"
+        sha256 "59e4f11fa50fbedfc11a946703923fcd70569e3170addfd5d43b7878fb3fde03"
 
         def install
           bin.install "jrp"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/jrp/releases/download/v1.2.3/jrp_Linux_arm64.tar.gz"
-        sha256 "bfa7c0820625a66a10ecb60891452024f110eae086798817c560ec09a0b26247"
+        url "https://github.com/yanosea/jrp/releases/download/v2.0.0/jrp_Linux_arm64.tar.gz"
+        sha256 "ff84d90d990dfdad4301b52502f921aa7b86f3af67dc7faa8d48910ea92faa1b"
 
         def install
           bin.install "jrp"
