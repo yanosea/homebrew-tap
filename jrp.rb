@@ -5,20 +5,20 @@
 class Jrp < Formula
   desc ""
   homepage ""
-  version "2.1.15"
+  version "2.1.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yanosea/jrp/releases/download/v2.1.15/jrp_Darwin_x86_64.tar.gz"
-      sha256 "d92290bf7d0412c19f51b7963904b08d331d9e749195ab3f4a2d088537b64c92"
+      url "https://github.com/yanosea/jrp/releases/download/v2.1.16/jrp_Darwin_x86_64.tar.gz"
+      sha256 "0727e4a69ac95412931fae920ae9e42e4cf2fc31908f1150c06c13be0a7bf653"
 
       def install
         bin.install "jrp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yanosea/jrp/releases/download/v2.1.15/jrp_Darwin_arm64.tar.gz"
-      sha256 "17954aa55306dab5c21bb9b6975ad0a76f7b0f80c9331d8ee0b30858bb8f7e65"
+      url "https://github.com/yanosea/jrp/releases/download/v2.1.16/jrp_Darwin_arm64.tar.gz"
+      sha256 "a901ba3dcd4e2ef8d4b383ece17d629d2c9b8e846f622d8fd6ef52bbe17d12d0"
 
       def install
         bin.install "jrp"
@@ -27,24 +27,18 @@ class Jrp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/jrp/releases/download/v2.1.15/jrp_Linux_x86_64.tar.gz"
-        sha256 "1a6f8f4b41288199962d4bdfedf9c683240aec4939431abc679b142600e6a934"
-
-        def install
-          bin.install "jrp"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/yanosea/jrp/releases/download/v2.1.16/jrp_Linux_x86_64.tar.gz"
+      sha256 "590af024136b41b63b56e194473dcfe7d2cfa16a971f09f390c78aa8c3e54d6a"
+      def install
+        bin.install "jrp"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/jrp/releases/download/v2.1.15/jrp_Linux_arm64.tar.gz"
-        sha256 "065ee103dd30fd5d7f3212292b8a0c5493316019e7858575069e3c793f61a3b1"
-
-        def install
-          bin.install "jrp"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/yanosea/jrp/releases/download/v2.1.16/jrp_Linux_arm64.tar.gz"
+      sha256 "60467601bed6e417e63ecb815426c930ffebdf3d10ba9234d55f3501fd5b18d4"
+      def install
+        bin.install "jrp"
       end
     end
   end
