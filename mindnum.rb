@@ -5,20 +5,20 @@
 class Mindnum < Formula
   desc ""
   homepage ""
-  version "2.0.1"
+  version "2.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yanosea/mindnum/releases/download/v2.0.1/mindnum_Darwin_x86_64.tar.gz"
-      sha256 "eb40b05fbeb802ca988b9d35b1b9fee54d97c6bc90db7e11cfe4cb4be8268954"
+      url "https://github.com/yanosea/mindnum/releases/download/v2.0.2/mindnum_Darwin_x86_64.tar.gz"
+      sha256 "e40865996e828cc332041ff22f416d51e12b8d723414ca9f25762a38a7383b35"
 
       def install
         bin.install "mindnum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yanosea/mindnum/releases/download/v2.0.1/mindnum_Darwin_arm64.tar.gz"
-      sha256 "9b6afe9d4459e91edbce1115cb69c52cf33137d36af8a1e315376f980a0b1126"
+      url "https://github.com/yanosea/mindnum/releases/download/v2.0.2/mindnum_Darwin_arm64.tar.gz"
+      sha256 "d1567aafa4fb6a01700d11bfeba6779955df5199d44561200e1809026866bd43"
 
       def install
         bin.install "mindnum"
@@ -27,24 +27,18 @@ class Mindnum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/mindnum/releases/download/v2.0.1/mindnum_Linux_x86_64.tar.gz"
-        sha256 "bff3335a20f45d02bf352613a71f69541eb40b3995943df3f8c49cc1e81f0ca6"
-
-        def install
-          bin.install "mindnum"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/yanosea/mindnum/releases/download/v2.0.2/mindnum_Linux_x86_64.tar.gz"
+      sha256 "7ffb1964e8cc71c8fbc91245cf7a8ea38c9202b8423d53bb1cbc2f2613513004"
+      def install
+        bin.install "mindnum"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/yanosea/mindnum/releases/download/v2.0.1/mindnum_Linux_arm64.tar.gz"
-        sha256 "21aaa099e7170479316cd447f2b9f051dfba41665fa962e734b79b1face2b22f"
-
-        def install
-          bin.install "mindnum"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/yanosea/mindnum/releases/download/v2.0.2/mindnum_Linux_arm64.tar.gz"
+      sha256 "47f2ad48578dede70c8bf76c37aa61ca0a116e825c7dcad3e8b6e5d94c33076b"
+      def install
+        bin.install "mindnum"
       end
     end
   end
