@@ -3,7 +3,7 @@ cask "jrp" do
   name "jrp"
   desc ""
   homepage ""
-  version "2.1.20"
+  version "2.1.21"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "jrp" do
   on_macos do
     on_intel do
       url "https://github.com/yanosea/jrp/releases/download/v#{version}/jrp_Darwin_x86_64.tar.gz"
-      sha256 "0b0af97287566d7ff462f07888ba30ada48af01bfed3f37ac7ed19e17af72b3b"
+      sha256 "5cdb937635c4622b41efac9a3860b3b912ef12d11ec37dc97f6ad1e99d0a0b31"
     end
     on_arm do
       url "https://github.com/yanosea/jrp/releases/download/v#{version}/jrp_Darwin_arm64.tar.gz"
-      sha256 "9ad6b2cef3c93cf37d4273a113f529b9023cc87d87f0e21590e55dc1fdce49c1"
+      sha256 "8368e4e2287af071a5bc5e2fce2bacf4bd0c6addd4c9aa77d33b79f100cb91f1"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/yanosea/jrp/releases/download/v#{version}/jrp_Linux_x86_64.tar.gz"
-      sha256 "b6683e47e5db822fbf07e42c530afed9e863777dbed1d316df4af9db70135d50"
+      sha256 "acd1fe3ae5675cb21120fefa15bee3604b0976a9dc23c87e8d589c82b39f85a2"
     end
     on_arm do
       url "https://github.com/yanosea/jrp/releases/download/v#{version}/jrp_Linux_arm64.tar.gz"
-      sha256 "fa7de208970fdc3162a8c27541a6459ea1d4056c2d5110be550489d0c850f472"
+      sha256 "83c70eec518f97dddfe46c562a95e9764d5221798a7d5494db1c0be3a8c70be5"
     end
   end
 
