@@ -3,7 +3,7 @@ cask "mindnum" do
   name "mindnum"
   desc ""
   homepage ""
-  version "2.0.4"
+  version "2.0.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "mindnum" do
   on_macos do
     on_intel do
       url "https://github.com/yanosea/mindnum/releases/download/v#{version}/mindnum_Darwin_x86_64.tar.gz"
-      sha256 "941c95d6c632741e7ea3bcd5db4545201ed5249272cd29d50084ce4db60e5769"
+      sha256 "5913a243f1ab23c20446f1092d2df49deb1a9ecef4b2f54208cbfc2ffc1e4b75"
     end
     on_arm do
       url "https://github.com/yanosea/mindnum/releases/download/v#{version}/mindnum_Darwin_arm64.tar.gz"
-      sha256 "de931e8151c3dad040627d6a2740308cc88109bd1f98cfacfb5dc261b77a66cd"
+      sha256 "94f1a9e0c54ebd1e4dde050d1798941d3ef07fde0de9f784a500c0e8695e357b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/yanosea/mindnum/releases/download/v#{version}/mindnum_Linux_x86_64.tar.gz"
-      sha256 "b4913d644b60d693bc0bd0a38bf8bac5d4e21e02ee061413e01a2428b3bb8c99"
+      sha256 "26c0d3c5f3d7a07291a00a89cff4a59ac6c153adfba28736838fb28608d9fec6"
     end
     on_arm do
       url "https://github.com/yanosea/mindnum/releases/download/v#{version}/mindnum_Linux_arm64.tar.gz"
-      sha256 "0790f1797f1c63e80ae700cee2afe1f2af995592e61114bd3985697dfdf8e5dd"
+      sha256 "1f77bf9ce31e3ec60b3e594231afdb94ad0276ca9ad223b7d5c82abe166f28c7"
     end
   end
 
